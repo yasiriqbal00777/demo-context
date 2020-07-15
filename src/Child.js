@@ -5,7 +5,8 @@ function Child(props){
     let value = React.useContext(ValueContext);
     return(
         <div>
-            Child Number {value}
+            Child Number {value[0]}
+            <button onClick = {()=> { value[1](++value[0])}}>Update Value</button> 
         </div>
     );
 }

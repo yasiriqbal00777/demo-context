@@ -5,16 +5,16 @@ import { useState } from 'react';
 import ValueContext from './ValueContext';
 
 function App() {
-  let [number,setNumber]= useState(45);
-  let value = 81;
+  //let [number,setNumber]= useState(45);
+  let value = useState(45); //value[0] as value  and value[1] as function passed
+  //let value = 81;
   return (
-   // <ValueContext.Provider value={value}>
+   <ValueContext.Provider value={value}>
       <div>
       Hello World !!!
       <Parent></Parent>
-      <button onClick={()=> {setNumber(++number)}}> Increse Number </button>
       </div>
-    //</ValueContext.Provider>
+    </ValueContext.Provider>
   );
 }
 
