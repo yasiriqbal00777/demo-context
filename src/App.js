@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Parent from './Parent'
+import { useState } from 'react';
+import ValueContext from './ValueContext';
 
 function App() {
+  let [number,setNumber]= useState(45);
+  let value = 81;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   // <ValueContext.Provider value={value}>
+      <div>
+      Hello World !!!
+      <Parent></Parent>
+      <button onClick={()=> {setNumber(++number)}}> Increse Number </button>
+      </div>
+    //</ValueContext.Provider>
   );
 }
 
